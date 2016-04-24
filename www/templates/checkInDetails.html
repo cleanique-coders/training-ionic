@@ -1,0 +1,19 @@
+<ion-view title="Check In Details" id="page3">
+    <ion-content padding="true" class="has-header">
+        <div ng-if="checkin.map"  style="border: 1px solid #ccc; border-radius: 2px">
+            <img ng-src="{{checkin.map}}" alt="" style="width:100%">
+        </div>
+        <div>
+            <p>
+                Address:
+            </p>
+            <p ng-bind-html="checkin.address"></p>
+        </div>
+        <div>
+            <p>
+                Description:
+            </p>
+            <p ng-bind-html="checkin.description"></p>
+        </div>
+    </ion-content>
+</ion-view>

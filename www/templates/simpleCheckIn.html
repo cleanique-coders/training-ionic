@@ -1,0 +1,17 @@
+<ion-view title="Simple Check In" id="page1">
+    <ion-content padding="true" class="has-header">
+    	
+        <a ui-sref="addNewCheckIn" id="simpleCheckIn-button1" style="border-radius:0px 0px 0px 0px;" class="button button-balanced button-large button-block icon ion-android-add-circle"></a>
+        
+        <!-- ng-repeat: to iterate list -->
+        <ion-list ng-repeat="checkin in Session.checkins" 
+        	ui-sref="checkInDetails({id: checkin.$$hashKey})">
+        	<ion-item>
+        		{{checkin.address | limitTo: 15}} 
+        		<button class="button button-assertive icon ion-trash-a pull-right" 
+        		ng-click="removeCheckin(checkin)"></button>
+        	</ion-item>
+        </ion-list>
+
+    </ion-content>
+</ion-view>

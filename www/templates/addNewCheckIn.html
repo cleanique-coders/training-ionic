@@ -1,0 +1,33 @@
+<ion-view title="Add New Check In" id="page2">
+    <ion-content padding="true" class="has-header">
+        <div class="list card">
+            <div class="item item-divider">Check in Details</div>
+            <div class="item item-body">
+                
+                <div ng-if="map"  style="border: 1px solid #ccc; border-radius: 2px">
+                    <img ng-src="{{map}}" alt="" style="width:100%">
+                </div>
+
+                <form class="list">
+                    <label class="item item-input" name="longitude">
+                        <span class="input-label">Longitude</span>
+                        <input type="text" placeholder="" ng-model="longitude">
+                    </label>
+                    <label class="item item-input" name="latitude">
+                        <span class="input-label">Latitude</span>
+                        <input type="text" placeholder="" ng-model="latitude">
+                    </label>
+                    <label class="item item-input item-stacked-label">
+                        <span class="input-label">Address</span>
+                        <textarea ng-model="$parent.address" name="address" rows="4" required></textarea>
+                    </label>
+                    <label class="item item-input item-stacked-label">
+                        <span class="input-label">Description</span>
+                        <textarea ng-model="$parent.description" name="description" rows="4" required></textarea>
+                    </label>
+                    <a ui-sref="simpleCheckIn" id="addNewCheckIn-button2" style="border-radius:0px 0px 0px 0px;" class="button button-balanced button-large button-block" ng-click="save()">Save</a>
+                </form>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>
